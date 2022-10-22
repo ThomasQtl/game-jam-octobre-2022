@@ -2,29 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oxygenes : MonoBehaviour
+public class baudroie : MonoBehaviour
 {
-    private float m_speed;
+    private float m_speed = 0.5f;
+    public bool rotate = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!rotate)
+        {
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_speed = Random.Range(1f, 2.5f);
-        Vector3 force = new Vector3(0f, m_speed, 0f);
+        m_speed = Random.Range(0.4f, 2f);
+        Vector3 force = new Vector3(m_speed, 0f, 0f);
         this.transform.position += force * Time.deltaTime;
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player") {
-            GameObject go = GameObject.Find("player");
-            go.GetComponent<player>().AddOx(5f); 
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("PERDU");
             Destroy(this.gameObject);
         }
     }
