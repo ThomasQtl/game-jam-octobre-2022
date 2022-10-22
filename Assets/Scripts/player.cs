@@ -40,9 +40,7 @@ public class player : MonoBehaviour
     }
 
     public void defaite(){
-        //GameObject.Find("player").GetComponent<staticScore>().setFinalScore(GameObject.Find("scoreScript").GetComponent<scoreScript>().scoreValue);
         staticScore.finalScore = scoreScript.scoreValue;
-        // PEUT ETRE VIA UN FICHIER DE SAVE
         SceneManager.LoadScene("gameOver");         
     }
 
