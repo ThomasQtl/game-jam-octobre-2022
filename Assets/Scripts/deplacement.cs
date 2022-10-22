@@ -20,7 +20,7 @@ public class deplacement : MonoBehaviour
     void Update()
     {
      
-        print(rb.position.y);   
+        //print(rb.position.y);   
     }
 
     void FixedUpdate()
