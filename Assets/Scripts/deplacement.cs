@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class deplacement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 6f;
     private Rigidbody2D rb;
     Vector2 movement;
 
