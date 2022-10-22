@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 2145090808}
   - component: {fileID: 2145090809}
   - component: {fileID: 2145090810}
+  - component: {fileID: 2145090811}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -911,7 +912,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0a78259fd3a20f74e8488027223d5749, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -989,6 +990,18 @@ MonoBehaviour:
   text: {fileID: 688778788}
   ox: 100
   respirationSpeed: 5
+--- !u!114 &2145090811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145090802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22d03480d92910419f4108ee5bfa9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8565531378198311514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1067,5 +1080,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 24ce9343c5fba7c44a7cb767ef7a5c37,
         type: 3}
+    - target: {fileID: 3721565892775737802, guid: 8ce50e943175bf04c8779233dc2a6777,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce50e943175bf04c8779233dc2a6777, type: 3}
