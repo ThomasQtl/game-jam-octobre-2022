@@ -30,5 +30,6 @@ public class deplacement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         movement = ctx.ReadValue<Vector2>();
+        print("test");
     }
 }
