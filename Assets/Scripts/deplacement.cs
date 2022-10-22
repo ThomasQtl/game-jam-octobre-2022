@@ -19,7 +19,8 @@ public class deplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
+        print(rb.position.y);   
     }
 
     void FixedUpdate()
@@ -30,6 +31,9 @@ public class deplacement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         movement = ctx.ReadValue<Vector2>();
-        print("test");
+    }
+
+    public float getY(){
+        return rb.position.y;
     }
 }
