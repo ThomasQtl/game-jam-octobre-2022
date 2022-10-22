@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depth: 0
-  intensity: 0.1
+  intensity: 0.05
 --- !u!212 &1582980541
 SpriteRenderer:
   m_ObjectHideFlags: 0

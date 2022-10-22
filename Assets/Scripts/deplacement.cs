@@ -19,7 +19,11 @@ public class deplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float xmin = -11f, xmax=11f, ymin = -4f, ymax = 4f;
+        if(rb.position.x<xmin) rb.position = new Vector2(xmin, rb.position.y);
+        if(rb.position.x>xmax) rb.position = new Vector2(xmax, rb.position.y);
+        if(rb.position.y<ymin) rb.position = new Vector2(rb.position.x, ymin);
+        if(rb.position.y>ymax) rb.position = new Vector2(rb.position.x, ymax);
     }
 
     void FixedUpdate()
