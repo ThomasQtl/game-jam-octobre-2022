@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     public int nbBullesMax=5, nbBaudroieMax=2, nbMeduseMax=3;
     public bool isInGame = true;
     public float waitInSeconds;
-    public int score = 0;
     public TextMesh scoreTxt;
 
     // Start is called before the first frame update
@@ -22,7 +21,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator generateWave() {
         while (isInGame) {
-            score+=10;
+            scoreScript.scoreValue+=10;
             UpdateScore();
             nbBaudroie = Random.Range(0, nbBaudroieMax);
             nbBaudroie1 = Random.Range(0, nbBaudroieMax);
@@ -50,9 +49,7 @@ public class GameController : MonoBehaviour
     }
 
     void UpdateScore(){
-        scoreTxt.text = "Score :"+score;
-
         GameObject go = GameObject.Find("background");
-        go.GetComponent<background>().depth = score/10;
+        go.GetComponent<background>().depth = scoreScript.scoreValue/10;
     }
 }

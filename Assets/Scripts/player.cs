@@ -8,8 +8,6 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
 
-    public TextMesh text;
-    public float ox = 100f;
     public float respirationSpeed = 0.1f;
 
     // Start is called before the first frame update
@@ -21,20 +19,15 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ox <= 0) {
+        if(oxygeneScript.ox <= 0) {
             defaite();
         }
-        ox -= respirationSpeed*Time.fixedDeltaTime;
-        UpdateText();
-    }
-
-    void UpdateText(){
-        text.text = "Oxygene: "+(int)ox+"%";
+        oxygeneScript.ox -= respirationSpeed*Time.fixedDeltaTime;
     }
 
     public void AddOx(float q){
-        if(ox+q<100f)ox+=q;
-        else ox = 100f;
+        if(oxygeneScript.ox+q<100f)oxygeneScript.ox+=q;
+        else oxygeneScript.ox = 100f;
     }
 
 
@@ -47,8 +40,10 @@ public class player : MonoBehaviour
     }
 
     public void defaite(){
-        GameObject.Find("player").GetComponent<staticScore>().setFinalScore(GameObject.Find("GameController").GetComponent<GameController>().score);
-        SceneManager.LoadScene("gameOver");            
+        //GameObject.Find("player").GetComponent<staticScore>().setFinalScore(GameObject.Find("scoreScript").GetComponent<scoreScript>().scoreValue);
+        staticScore.finalScore = scoreScript.scoreValue;
+        // PEUT ETRE VIA UN FICHIER DE SAVE
+        SceneManager.LoadScene("gameOver");         
     }
 
 }

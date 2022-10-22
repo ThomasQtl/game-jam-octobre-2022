@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class control : MonoBehaviour
+public class oxygeneScript : MonoBehaviour
 {
-    public TextMesh txt;
+    public static float ox = 100;
+    Text oxT;
+
     // Start is called before the first frame update
     void Start()
     {
-        //txt.text = "Score Final : "+GameObject.Find("sceneControl").GetComponent<staticScore>().getFinaleScore();
+        oxT = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        oxT.text = "Oxygène: " + (int)ox + "%";
     }
 }

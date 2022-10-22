@@ -11,7 +11,7 @@ public class submarine : MonoBehaviour
     void Start()
     {
         float subScale = 0.2f+1/subSpeed;
-        transform.localScale = new Vector3(subScale*0.75f, subScale*1f, subScale*1f);
+        transform.localScale = new Vector3(subScale*1f, subScale*1f, subScale*1f);
     }
 
     // Update is called once per frame

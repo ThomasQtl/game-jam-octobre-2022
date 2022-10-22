@@ -3,28 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class staticScore : MonoBehaviour
+public class scoreScript : MonoBehaviour
 {
-    public static int finalScore;
-
+    public static int scoreValue = 0;
     Text score;
+
     // Start is called before the first frame update
     void Start()
     {
         score = GetComponent<Text>();
     }
 
-    public int getFinaleScore(){
-        return finalScore;
-    }
-
-    public void setFinalScore(int score){
-        finalScore = score;
-    }
-
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score Final: " + finalScore;
+        score.text = "Score: " + scoreValue;
     }
 }
