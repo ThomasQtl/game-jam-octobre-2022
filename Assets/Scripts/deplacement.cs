@@ -6,11 +6,12 @@ using UnityEngine.InputSystem;
 public class deplacement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    float xmin = -11f, xmax=11f, ymin = -4f, ymax = 4f;
     private Rigidbody2D rb;
     Vector2 movement;
 
     // Start is called before the first frame update
-    void Start() 
+    void Start()
     {
         movement = new Vector2();
         rb = GetComponent<Rigidbody2D>();
@@ -19,7 +20,6 @@ public class deplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xmin = -11f, xmax=11f, ymin = -4f, ymax = 4f;
         if(rb.position.x<xmin) rb.position = new Vector2(xmin, rb.position.y);
         if(rb.position.x>xmax) rb.position = new Vector2(xmax, rb.position.y);
         if(rb.position.y<ymin) rb.position = new Vector2(rb.position.x, ymin);
