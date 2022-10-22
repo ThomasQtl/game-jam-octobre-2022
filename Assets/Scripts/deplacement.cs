@@ -10,7 +10,7 @@ public class deplacement : MonoBehaviour
     Vector2 movement;
 
     // Start is called before the first frame update
-    void Start() 
+    void Start()
     {
         movement = new Vector2();
         rb = GetComponent<Rigidbody2D>();
@@ -18,7 +18,7 @@ public class deplacement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
     }
 
     void FixedUpdate()
@@ -31,7 +31,12 @@ public class deplacement : MonoBehaviour
         movement = ctx.ReadValue<Vector2>();
     }
 
-    public float getY(){
+    public float getX()
+    {
+        return rb.position.x;
+    }
+    public float getY()
+    {
         return rb.position.y;
     }
 }
