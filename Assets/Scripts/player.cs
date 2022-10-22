@@ -13,7 +13,7 @@ public class player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(text.text);   
+
     }
 
     // Update is called once per frame
@@ -27,9 +27,10 @@ public class player : MonoBehaviour
         text.text = "Oxygene: "+(int)ox+"%";
     }
 
-    public void AddOxygene(float size){
-        ox+=size;
+    public void AddOx(float q){
+        if(ox<100f)ox+=q;
     }
+
 
     public void SetRespirationSpeed(float speed){
         respirationSpeed = speed;
