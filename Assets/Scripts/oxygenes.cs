@@ -22,7 +22,8 @@ public class oxygenes : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player") {
-            
+            GameObject go = GameObject.Find("player");
+            go.GetComponent<player>().AddOx(5f); 
             Destroy(this.gameObject);
         }
     }

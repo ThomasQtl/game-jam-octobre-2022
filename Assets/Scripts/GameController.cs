@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public int nbBulles = 5;
     public bool isInGame = true;
     public float waitInSeconds;
+    public int score = 0;
+    public TextMesh scoreTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,8 @@ public class GameController : MonoBehaviour
     
     IEnumerator generateWave(int nbBulles) {
         while (isInGame) {
+            score+=10;
+            UpdateScore();
             nbBulles = Random.Range(0, 5);
             waitInSeconds = Random.Range(0f, 5f);
             for (int i=0; i<nbBulles; i++) {
@@ -27,5 +31,12 @@ public class GameController : MonoBehaviour
             }
             yield return new WaitForSeconds(waitInSeconds);
         }
+    }
+
+    void UpdateScore(){
+        scoreTxt.text = "Score :"+score;
+
+        GameObject go = GameObject.Find("background");
+        go.GetComponent<background>().depth = score/10;
     }
 }
