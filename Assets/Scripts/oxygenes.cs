@@ -25,6 +25,7 @@ public class oxygenes : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             GameObject go = GameObject.Find("player");
             go.GetComponent<player>().AddOx(5f); 
+            scoreScript.scoreValue+=1;
             Destroy(this.gameObject);
         }
     }
