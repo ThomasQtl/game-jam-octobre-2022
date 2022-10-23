@@ -31,7 +31,7 @@ public class baudroie1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("PERDU");
+            player.defaite();
             Destroy(this.gameObject);
         }
     }

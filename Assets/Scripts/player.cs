@@ -22,7 +22,7 @@ public class player : MonoBehaviour
         if(oxygeneScript.ox <= 0) {
             defaite();
         }
-        oxygeneScript.ox -= respirationSpeed*Time.fixedDeltaTime/1000;
+        oxygeneScript.ox -= respirationSpeed*Time.fixedDeltaTime/7;
     }
 
     public void AddOx(float q){
@@ -39,7 +39,7 @@ public class player : MonoBehaviour
         respirationSpeed+=q;
     }
 
-    public void defaite(){
+    public static void defaite(){
         staticScore.finalScore = scoreScript.scoreValue;
         SceneManager.LoadScene("gameOver");         
     }
