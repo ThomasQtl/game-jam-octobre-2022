@@ -22,7 +22,7 @@ public class player : MonoBehaviour
         if(oxygeneScript.ox <= 0) {
             defaite();
         }
-        oxygeneScript.ox -= respirationSpeed*Time.fixedDeltaTime;
+        oxygeneScript.ox -= respirationSpeed*Time.fixedDeltaTime/1000;
     }
 
     public void AddOx(float q){
