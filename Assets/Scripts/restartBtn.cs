@@ -17,7 +17,7 @@ public class restartBtn : MonoBehaviour
         
     }
 
-    void OnMouseDown(){
+    public void restart() {
         SceneManager.LoadScene("SampleScene");
     }
 }
