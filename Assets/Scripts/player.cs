@@ -37,7 +37,6 @@ public class player : MonoBehaviour
 
     public void AddRespirationSpeed(float q){
         respirationSpeed+=q;
-        Debug.Log("speed: "+respirationSpeed);
     }
 
     public static void defaite(){
