@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scoreScript.scoreValue = 0;
         StartCoroutine(generateWave());
     }
 
