@@ -14,7 +14,7 @@
 ## Idées
 
 - Un plongeur qui va de plus en plus profond dans les AbyZZes
-- Plus on va profond, plus ça s'assombrie 
+- Plus on va profond, plus ça s'assombrit 
 - Système d'oxygène où il faut récupérer de l'oxygène pour survivre
 - Différents poissons qui sont nos ennemis à éviter
 
