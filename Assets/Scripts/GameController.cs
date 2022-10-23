@@ -63,5 +63,8 @@ public class GameController : MonoBehaviour
     void UpdateScore(){
         GameObject go = GameObject.Find("background");
         go.GetComponent<background>().depth = scoreScript.scoreValue/10;
+        
+        GameObject pl = GameObject.Find("player");
+        pl.GetComponent<player>().AddRespirationSpeed(Random.Range(0.5f,2f));
     }
 }
