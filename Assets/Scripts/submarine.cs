@@ -11,16 +11,15 @@ public class submarine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!rotate)
-        {
-            transform.Rotate(0f, 180f, 0f);
-        }
+        subSpeed = Random.Range(0.4f, 2f);
+        float scale = 1/subSpeed;
+        transform.localScale = new Vector3(scale,scale,scale);
+        transform.Rotate(0f, 180f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        subSpeed = Random.Range(0.4f, 2f);
         Vector3 force = new Vector3(subSpeed, 0f, 0f);
         this.transform.position += force * Time.deltaTime;
     }
