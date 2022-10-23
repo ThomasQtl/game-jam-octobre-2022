@@ -14,6 +14,7 @@ public class player : MonoBehaviour
     void Start()
     {
         oxygeneScript.ox = 100f;
+        respirationSpeed = 0.1f;
     }
 
     // Update is called once per frame
